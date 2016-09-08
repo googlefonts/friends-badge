@@ -1,0 +1,10 @@
+{
+  "name": "@googlefonts/badge",
+  "version": "v0.0.0",
+  "private": true,
+  "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+  "contributors": [
+    "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+    "Yuin Chien <yuin@google.com> (yuinchien.com)"
+  ]
+}
