@@ -6,5 +6,8 @@
   "contributors": [
     "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
     "Yuin Chien <yuin@google.com> (yuinchien.com)"
-  ]
+  ],
+  "devDependencies": {
+    "qunitjs": "2.0.1"
+  }
 }
