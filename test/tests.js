@@ -1,4 +1,5 @@
 var libraryID = 'js-GoogleFontsBadge'
+var libraryStylesID = 'js-GoogleFontsBadgeStyles'
 
 QUnit.testStart(function (testDetails) {
   // console.log('start', testDetails)
@@ -23,6 +24,13 @@ QUnit.test('remove after initialising', function () {
   QUnit.assert.ok(document.getElementById(libraryID))
   gfBadge().remove()
   QUnit.assert.ok(!document.getElementById(libraryID))
+})
+
+QUnit.test('remove styles after initialising', function () {
+  gfBadge()
+  QUnit.assert.ok(document.getElementById(libraryStylesID))
+  gfBadge().remove()
+  QUnit.assert.ok(!document.getElementById(libraryStylesID))
 })
 
 // QUnit.test('initialise into parent node', function () {
