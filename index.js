@@ -1,15 +1,21 @@
 (function (window, document, undefined) {
   'use strict'
 
+  var doc = document
+  var badgeParent = doc.body // TODO Allow an option to override this with a different node
+  var badgeContainer = doc.createElement('div')
+  badgeContainer.id = 'js-GoogleFontsBadge'
+  badgeContainer.innerHTML = 'Friends of Google Fonts'
+
   var GoogleFontsBadge = {
     init: function (opts) {
-      console.log('init', opts)
+      badgeParent.appendChild(badgeContainer)
     },
     main: function (opts) {
       GoogleFontsBadge.init(opts)
     },
     remove: function () {
-      console.log('remove')
+      badgeParent.removeChild(badgeContainer)
     }
   }
 
@@ -21,8 +27,9 @@
   if (typeof module === 'object' && typeof module.exports !== 'undefined') {
     module.exports = gfBadge
   } else {
-    window.gfBadge = gfBadge
+    if (window && document) {
+      window.gfBadge = gfBadge
+    }
   }
-
 
 }(window, document))
