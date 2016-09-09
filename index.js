@@ -4,12 +4,15 @@
   var doc = document
   var badgeParent = doc.body // TODO Allow an option to override this with a different node
   var badgeContainer = doc.createElement('div')
+  var badgeInner = doc.createElement('div')
   var badgeStyles = doc.createElement('style')
   badgeContainer.id = 'js-GoogleFontsBadge'
   badgeContainer.className = 'GoogleFontsBadge'
-  badgeContainer.innerHTML = 'Friends of Google Fonts'
+  badgeInner.className = 'GoogleFontsBadge-inner'
+  badgeInner.innerHTML = 'Friends of Google Fonts'
   badgeStyles.id = 'js-GoogleFontsBadgeStyles'
-  badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); background: black; color: white; padding: 1em; position: fixed; bottom: 0; width: 100%; transition: transform 0.2s; }'
+  badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); position: fixed; bottom: 0; width: 100%; transition: transform 0.2s; } .GoogleFontsBadge-inner {  background: black; color: white; padding: 1em; }'
+  badgeContainer.appendChild(badgeInner)
 
   var GoogleFontsBadge = {
     init: function (opts) {
