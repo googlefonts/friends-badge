@@ -9,15 +9,22 @@
   badgeContainer.className = 'GoogleFontsBadge'
   badgeContainer.innerHTML = 'Friends of Google Fonts'
   badgeStyles.id = 'js-GoogleFontsBadgeStyles'
-  badgeStyles.innerHTML = '.GoogleFontsBadge { background: black; color: white; padding: 1em; position: fixed; bottom: 0; width: 100%; transition: transform 0.2s; }'
+  badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); background: black; color: white; padding: 1em; position: fixed; bottom: 0; width: 100%; transition: transform 0.2s; }'
 
   var GoogleFontsBadge = {
     init: function (opts) {
       badgeParent.appendChild(badgeContainer)
       doc.head.appendChild(badgeStyles)
 
-      doc.addEventListener('touchmove', ScrollStart, false);
-      doc.addEventListener('scroll', Scroll, false);
+      doc.addEventListener('touchmove', ScrollStart, false)
+      doc.addEventListener('scroll', Scroll, false)
+
+      console.log('scrolltop', badgeParent.scrollTop)
+
+      // Hide by default, show if at the top on load
+      if (badgeParent.scrollTop === 0) {
+        badgeContainer.style.transform = 'translateY(0)'
+      }
 
       function ScrollStart() {
         console.log('start, hide')
