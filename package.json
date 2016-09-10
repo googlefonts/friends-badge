@@ -5,7 +5,7 @@
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "contributors": [
     "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
-    "Yuin Chien <yuin@google.com> (yuinchien.com)"
+    "Yuin Chien <yuin@google.com> (http://yuinchien.com)"
   ],
   "dependencies": {
     "lodash.throttle": "4.0.1"
