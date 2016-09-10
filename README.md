@@ -1,3 +1,54 @@
 # Friends of Google Fonts badge
 
-Better docs to come.
+The “Made by Friends of Google Fonts” badge.
+
+<!--
+- Designed by Yuin Chien
+- Developed by Kenneth Ormandy
+- 10/14kb is the SVG, which is not great but is better than an extra HTTP request
+-->
+
+## Getting started
+
+A hosted version of this script will be available. To add it to your project, add this script tag to your project:
+
+```html
+<script src="../build/googlefontsbadge.js" async defer onload="gfBadge()"></script>
+```
+
+This will asynchronously load the badge and initialise it once it’s ready.
+
+### Browserify & Webpack
+
+Alternatively, if you are using a build tool like Browserify, Webpack, etc. you can install the badge as a dependency and initialise it yourself. First, you’ll want to install it as a dependency through npm:
+
+```sh
+npm install --save @googlefonts/badge
+```
+
+Then, require it in your project:
+
+```js
+var googleFontsBadge = require('@googlefonts/badge')
+
+// Initialise the badge when you are ready
+googleFontsBadge()
+```
+
+## Contributing
+
+To run the project locally, run the following commands in your terminal:
+
+```
+git clone https://github.com/googlefonts/badge googlefonts-badge
+cd googlefonts-badge
+npm install
+```
+
+Now you can build the distributed version of the file by running:
+
+```
+npm run build
+```
+
+…which uses Browserify to build a stand-alone minified version of the file.
