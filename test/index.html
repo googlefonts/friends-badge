@@ -6,22 +6,43 @@
     <title>googlefonts/badge tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      body { margin: 0; background: #FFF; }
       html {
         font-family: "Avenir Next", "Avenir", Verdana, sans-serif;
         line-height: 1.4;
+        font-size: 1.5rem;
         min-height: 3000px;
-      }
-
-      body {
-        margin: 0;
       }
 
       .container {
         max-width: 35em;
         margin-left: auto;
         margin-right: auto;
-        padding: 1em;
+        padding: 0.5rem;
       }
+
+      /*.badgeTest {
+        mix-blend-mode: difference;
+      }
+*/
+      .badgeTest {
+        /*-webkit-filter: grayscale(100%);
+        filter: grayscale(100%);*/
+
+      .badgeTest svg {
+        outline: 2px solid red;
+        -webkit-filter: grayscale(100%) invert(100%);
+        filter: grayscale(100%) invert(100%);
+        mix-blend-mode: difference;
+      }
+
+      .bg-black { background-color: #000 }
+      .bg-white { background-color: #FFF }
+      .bg-blue { background-color: cornflowerblue }
+      .bg-red { background-color: red }
+      .bg-yellow { background-color: yellow }
+      .black { color: black }
+      .white { color: white }
     </style>
   </head>
   <body>
