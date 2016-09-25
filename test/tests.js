@@ -42,3 +42,5 @@ QUnit.test('remove styles after initialising', function () {
 //     gfBadge(fixture).remove()
 //   })
 // })
+
+// TODO Test can click through `.GoogleFontsBadge` but can still click anchor

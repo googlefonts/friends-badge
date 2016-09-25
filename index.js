@@ -14,7 +14,7 @@ badgeContainer.className = 'GoogleFontsBadge'
 
 badgeInner.className = 'GoogleFontsBadge-inner'
 badgeStyles.id = 'js-GoogleFontsBadgeStyles'
-badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); position: fixed; z-index: 9999; bottom: 0; width: 100%; transition: transform 0.2s; } .GoogleFontsBadge__down { transform: translateY(100%) } .GoogleFontsBadge__up { transform: translateY(0) } .GoogleFontsBadge-inner { background: black; padding: 24px; } .GoogleFontsBadge-inner svg { max-width: 175px; fill: #A3A3A3; } @media (min-width: 1024px) { .GoogleFontsBadge { text-align: right } .GoogleFontsBadge-inner { background: transparent; fill: #555; } .GoogleFontsBadge__down { transform: translateY(0); } }'
+badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); position: fixed; z-index: 9999; bottom: 0; width: 100%; transition: transform 0.2s; pointer-events: none; } .GoogleFontsBadge__down { transform: translateY(100%) } .GoogleFontsBadge__up { transform: translateY(0) } .GoogleFontsBadge-inner { background: black; padding: 24px; } .GoogleFontsBadge-inner svg { max-width: 175px; fill: #A3A3A3; } @media (min-width: 1024px) { .GoogleFontsBadge { text-align: right } .GoogleFontsBadge-inner { background: transparent; fill: #555; } .GoogleFontsBadge__down { transform: translateY(0); } }'
 // #626262 on white
 // #A3A3A3 on black
 
@@ -24,6 +24,7 @@ badgeLink.style.border = 'none'
 badgeLink.style.background = 'transparent'
 badgeLink.style.padding = '0'
 badgeLink.style.margin = '0'
+badgeLink.style.pointerEvents = 'initial'
 // TODO focus styles
 
 badgeLink.href = 'https://fonts.google.com'
