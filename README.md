@@ -29,10 +29,10 @@ npm install --save @googlefonts/badge
 Then, require it in your project:
 
 ```js
-var googleFontsBadge = require('@googlefonts/badge')
+var gfBadge = require('@googlefonts/badge')
 
 // Initialise the badge when you are ready
-googleFontsBadge()
+gfBadge()
 ```
 
 ## Contributing
