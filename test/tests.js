@@ -44,3 +44,4 @@ QUnit.test('remove styles after initialising', function () {
 // })
 
 // TODO Test can click through `.GoogleFontsBadge` but can still click anchor
+// TODO Test should have some kind of ARIA description or fallback content in the SVG
