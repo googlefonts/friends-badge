@@ -25,7 +25,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   badgeLink.style.padding = '16px 16px 14px 16px'
   badgeLink.style.margin = '0'
   badgeLink.style.display = 'block'
-  badgeLink.style.height = '42px'
   badgeLink.style.pointerEvents = 'initial'
   badgeLink.setAttribute('aria-label', 'Project made by Friends of Google Fonts. Follow this link to visit Google Fonts.')
   // TODO focus styles
