@@ -16,13 +16,14 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   badgeInner.className = 'GoogleFontsBadge-inner';
   badgeStyles.id = 'js-GoogleFontsBadgeStyles';
   // eslint-disable-next-line max-len
-  badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); position: fixed; z-index: 9999; bottom: 0; width: 100%; transition: transform 0.2s; pointer-events: none; } .GoogleFontsBadge__down { transform: translateY(100%) } .GoogleFontsBadge__up { transform: translateY(0) } .GoogleFontsBadge-inner { background: #222; } .GoogleFontsBadge-inner svg { max-width: 136px; fill: rgba(255, 255, 255, 0.70); } @media (min-width: 1024px) { .GoogleFontsBadge { text-align: right; width: 168px; right: 0 } .GoogleFontsBadge-inner { background: transparent; } .GoogleFontsBadge-inner svg { fill: rgba(0, 0, 0, 0.54); } .GoogleFontsBadge__down { transform: translateY(0); } }';
+  badgeStyles.innerHTML = '.GoogleFontsBadge { transform: translateY(100%); position: fixed; z-index: 9999; bottom: 0; width: 100%; transition: transform 0.2s; pointer-events: none; } .GoogleFontsBadge__down { transform: translateY(100%) } .GoogleFontsBadge__up { transform: translateY(0) } .GoogleFontsBadge-inner { background: #222; } .GoogleFontsBadge-inner svg { width: 136px; display: block; fill: rgba(255, 255, 255, 0.70); } @media (min-width: 1024px) { .GoogleFontsBadge-inner { background: transparent; } .GoogleFontsBadge-inner svg { fill: rgba(0, 0, 0, 0.54); } .GoogleFontsBadge__down { transform: translateY(0); } }';
 
   // Link styles need to be unset to avoid cascade issues
   badgeLink.style.unset = 'all';
   badgeLink.style.border = 'none';
   badgeLink.style.background = 'transparent';
   badgeLink.style.padding = '16px 16px 14px 16px';
+  badgeLink.style.boxSizing = 'border-box';
   badgeLink.style.margin = '0';
   badgeLink.style.display = 'block';
   badgeLink.style.pointerEvents = 'initial';
