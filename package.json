@@ -11,11 +11,18 @@
     "lodash.throttle": "4.0.1"
   },
   "devDependencies": {
+    "eslint": "3.7.1",
+    "eslint-config-google": "0.6.0",
     "harp-minify": "0.4.0",
     "qunitjs": "2.0.1"
   },
+  "eslintConfig": {
+    "extends": "google"
+  },
   "scripts": {
+    "lint": "eslint .",
     "pretest": "npm run build",
+    "posttest": "npm run lint",
     "test": "",
     "build": "mkdir build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/minify/bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
   }
