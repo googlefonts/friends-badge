@@ -17,10 +17,13 @@
     "qunitjs": "2.0.1"
   },
   "eslintConfig": {
-    "extends": "google"
+    "extends": "google",
+    "env": {
+      "browser": true
+    }
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint ./index.js ./test",
     "pretest": "npm run build",
     "posttest": "npm run lint",
     "test": "",
