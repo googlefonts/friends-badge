@@ -1,10 +1,9 @@
 'use strict';
 
 var throttle = require('lodash.throttle');
-var win = window;
-var doc = document;
 
-if (typeof win !== 'undefined' && typeof doc !== 'undefined') {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  var doc = document;
   var badgeParent = doc.body;
   var badgeContainer = doc.createElement('div');
   var badgeInner = doc.createElement('div');
@@ -96,6 +95,6 @@ if (typeof win !== 'undefined' && typeof doc !== 'undefined') {
   if (typeof module === 'object' && typeof module.exports !== 'undefined') {
     module.exports = gfBadge;
   } else {
-    win.gfBadge = gfBadge;
+    window.gfBadge = gfBadge;
   }
 }
