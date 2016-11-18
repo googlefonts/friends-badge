@@ -14,6 +14,7 @@
     "eslint": "3.7.1",
     "eslint-config-google": "0.6.0",
     "harp-minify": "0.4.0",
+    "mkdirp": "0.5.1",
     "qunitjs": "2.0.1"
   },
   "eslintConfig": {
@@ -27,6 +28,6 @@
     "pretest": "npm run build",
     "posttest": "npm run lint",
     "test": "",
-    "build": "mkdir build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/.bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
+    "build": "mkdirp build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/.bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
   }
 }
