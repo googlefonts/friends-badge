@@ -27,6 +27,6 @@
     "pretest": "npm run build",
     "posttest": "npm run lint",
     "test": "",
-    "build": "mkdir build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/minify/bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
+    "build": "mkdir build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/.bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
   }
 }
