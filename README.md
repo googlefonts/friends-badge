@@ -20,11 +20,19 @@ This will asynchronously load the badge and initialise it once it’s ready.
 
 ### Browserify & Webpack
 
-Alternatively, if you are using a build tool like Browserify, Webpack, etc. you can install the badge as a dependency and initialise it yourself. First, you’ll want to install it as a dependency through npm:
+Alternatively, if you are using a build tool like Browserify, Webpack, etc. you can install the badge as a dependency and initialise it yourself. First, you’ll want to install it as a dependency using npm:
+
+```sh
+npm install --save https://github.com/googlefonts/friends-badge
+```
+
+<!--
 
 ```sh
 npm install --save @googlefonts/badge
 ```
+
+-->
 
 Then, require it in your project:
 
