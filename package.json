@@ -8,6 +8,7 @@
     "Yuin Chien <yuin@google.com> (http://yuinchien.com)",
     "Luca Falasco <falasco.luca@gmail.com> (http://lucafalasco.com)"
   ],
+  "main": "build/googlefontsbadge.js",
   "dependencies": {
     "lodash": "^4.17.4"
   },
