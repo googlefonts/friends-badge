@@ -69,10 +69,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         if (badgeParent.scrollTop === 0) {
           // If scrolled back to top
           badgeShow();
-        } else if (badgeParent.scrollTop < scrollValue && ((badgeParent.scrollTop - scrollValue) * -1) > 250) {
+        } else if (badgeParent.scrollTop && badgeParent.scrollTop < scrollValue && ((badgeParent.scrollTop - scrollValue) * -1) > 250) {
           // If scrolled back up over 250px (this number could be tied to the viewport height)
           badgeShow();
-        } else {
+        } else if (badgeParent.scrollTop > scrollValue) {
           badgeHide();
         }
 
