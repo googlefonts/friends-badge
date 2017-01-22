@@ -5,30 +5,37 @@
   "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
   "contributors": [
     "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
-    "Yuin Chien <yuin@google.com> (http://yuinchien.com)"
+    "Yuin Chien <yuin@google.com> (http://yuinchien.com)",
+    "Luca Falasco <falasco.luca@gmail.com> (http://lucafalasco.com)"
   ],
   "dependencies": {
-    "lodash.throttle": "4.0.1"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
     "del-cli": "0.2.0",
     "eslint": "3.7.1",
     "eslint-config-google": "0.6.0",
-    "harp-minify": "0.4.0",
-    "mkdirp": "0.5.1",
-    "qunitjs": "2.0.1"
-  },
-  "eslintConfig": {
-    "extends": "google",
-    "env": {
-      "browser": true
-    }
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "path": "^0.12.7",
+    "qunitjs": "2.0.1",
+    "strip-loader": "^0.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "lint": "eslint ./index.js ./test",
+    "start": "npm run build && webpack-dev-server",
+    "lint": "eslint ./src/googlefontsbadge.js ./test",
     "pretest": "npm run build",
     "posttest": "npm run lint",
     "test": "",
-    "build": "mkdirp dist; del ./dist/*; browserify index.js -s gfBadge -o dist/googlefontsbadge.js; ./node_modules/.bin/minify dist/googlefontsbadge.js dist/googlefontsbadge.js"
+    "build": "([ -d build ] && rm -R build/); mkdir -p build && NODE_ENV=production webpack"
   }
 }
