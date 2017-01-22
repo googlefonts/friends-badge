@@ -37,13 +37,16 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   badgeContainer.appendChild(badgeInner);
 
   var GoogleFontsBadge = {
-    init: function(opts) {
+    init: function(element) {
       var scrollValue = 0;
-      badgeParent.appendChild(badgeContainer);
+      var container = element || doc;
+
+      badgeParent = element || doc.body;
+      doc.body.appendChild(badgeContainer);
       doc.head.appendChild(badgeStyles);
 
-      doc.addEventListener('touchmove', throttle(ScrollStart, 500), false);
-      doc.addEventListener('scroll', throttle(Scroll, 500), false);
+      container.addEventListener('touchmove', throttle(ScrollStart, 500), false);
+      container.addEventListener('scroll', throttle(Scroll, 500), false);
 
       function badgeShow() {
         badgeContainer.classList.remove('GoogleFontsBadge__down');
@@ -79,17 +82,17 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         scrollValue = badgeParent.scrollTop;
       }
     },
-    main: function(opts) {
-      GoogleFontsBadge.init(opts);
+    main: function(element) {
+      GoogleFontsBadge.init(element);
     },
     remove: function() {
-      badgeParent.removeChild(badgeContainer);
+      doc.body.removeChild(badgeContainer);
       doc.head.removeChild(badgeStyles);
     }
   };
 
-  var gfBadge = function(opts) {
-    GoogleFontsBadge.main.call(opts);
+  var gfBadge = function(element) {
+    GoogleFontsBadge.main(element);
     return GoogleFontsBadge;
   };
 
