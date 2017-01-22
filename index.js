@@ -1,14 +1,12 @@
-'use strict';
-
-var throttle = require('lodash.throttle');
+import { throttle } from 'lodash';
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  var doc = document;
-  var badgeParent = doc.body;
-  var badgeContainer = doc.createElement('div');
-  var badgeInner = doc.createElement('div');
-  var badgeLink = doc.createElement('a');
-  var badgeStyles = doc.createElement('style');
+  const doc = document;
+  const badgeContainer = doc.createElement('div');
+  const badgeInner = doc.createElement('div');
+  const badgeLink = doc.createElement('a');
+  const badgeStyles = doc.createElement('style');
+  let badgeParent = doc.body;
 
   badgeContainer.id = 'js-GoogleFontsBadge';
   badgeContainer.className = 'GoogleFontsBadge';
@@ -37,10 +35,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   badgeInner.appendChild(badgeLink);
   badgeContainer.appendChild(badgeInner);
 
-  var GoogleFontsBadge = {
-    init: function(element) {
-      var scrollValue = 0;
-      var container = element || doc;
+  const GoogleFontsBadge = {
+    init : function (element) {
+      let scrollValue = 0;
+      const container = element || doc;
 
       badgeParent = element || doc.body;
       doc.body.appendChild(badgeContainer);
@@ -66,7 +64,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
       function ScrollStart() {
         // TODO
-        console.log('start, hide');
       }
 
       function Scroll() {
@@ -83,16 +80,16 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         scrollValue = badgeParent.scrollTop;
       }
     },
-    main: function(element) {
+    main : function (element) {
       GoogleFontsBadge.init(element);
     },
-    remove: function() {
+    remove : function () {
       doc.body.removeChild(badgeContainer);
       doc.head.removeChild(badgeStyles);
-    }
+    },
   };
 
-  var gfBadge = function(element) {
+  const gfBadge = function (element) {
     GoogleFontsBadge.main(element);
     return GoogleFontsBadge;
   };
