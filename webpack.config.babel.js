@@ -12,7 +12,7 @@ module.exports = {
     app : [PROD ? './src/googlefontsbadge.js' : './src/index.js'].concat(PROD ? [] : entryDevelopment),
   },
   output : {
-    path          : path.resolve('./build'),
+    path          : path.resolve('./dist'),
     filename      : 'googlefontsbadge.js',
     library       : 'gfBadge',
     libraryTarget : 'umd',
