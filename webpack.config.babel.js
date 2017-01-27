@@ -1,11 +1,11 @@
-import path from 'path'
-import webpack from 'webpack'
+import path from 'path';
+import webpack from 'webpack';
 
-const PROD = (process.env.NODE_ENV === 'production')
+const PROD = (process.env.NODE_ENV === 'production');
 
 const entryDevelopment = [
   'webpack-dev-server/client?http://localhost:8080/',
-]
+];
 
 module.exports = {
   entry : {
@@ -32,9 +32,9 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress : {
-        warnings   : false,
-        pure_funcs : ['console.log', 'console.info'],
-        unused     : true,
+        warnings     : false,
+        drop_console : true,
+        unused       : true,
       },
       mangle : {
         except : ['DevTools'],
@@ -58,4 +58,4 @@ module.exports = {
   resolve : {
     extensions : ['', '.js', '.es6'],
   },
-}
+};

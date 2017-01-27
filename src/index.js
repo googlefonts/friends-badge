@@ -1,2 +1,2 @@
-import gfBadge from './googlefontsbadge.js'
-gfBadge()
+import gfBadge from './googlefontsbadge.js';
+gfBadge();
