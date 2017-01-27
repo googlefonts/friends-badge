@@ -20,10 +20,14 @@ This will asynchronously load the badge and initialise it once it’s ready.
 
 ### Browserify & Webpack
 
-Alternatively, if you are using a build tool like Browserify, Webpack, etc. you can install the badge as a dependency and initialise it yourself. First, you’ll want to install it as a dependency using npm:
+Alternatively, if you are using a build tool like Browserify, Webpack, etc. you can install the badge as a dependency and initialise it yourself. First, you’ll want to install it as a dependency using npm or yarn:
 
 ```sh
 npm install --save https://github.com/googlefonts/friends-badge
+```
+or
+```sh
+yarn add https://github.com/googlefonts/friends-badge
 ```
 
 <!--
@@ -37,26 +41,37 @@ npm install --save @googlefonts/badge
 Then, require it in your project:
 
 ```js
-var gfBadge = require('@googlefonts/badge')
+import gfBadge from '@googlefonts/badge'
+
+const element = document.getElementById("column")
 
 // Initialise the badge when you are ready
-gfBadge()
+gfBadge(element)
 ```
+
+This registers an event listener on the specified DOM element, multiple instances are also supported.
+If no element is specified the scroll listener is set on `document`
 
 ## Contributing
 
 To run the project locally, run the following commands in your terminal:
 
 ```
-git clone https://github.com/googlefonts/badge googlefonts-badge
-cd googlefonts-badge
+git clone https://github.com/googlefonts/friends-badge
+cd friends-badge
 npm install
 ```
 
-Now you can build the distributed version of the file by running:
+Start the development server:
+
+```
+npm start
+```
+
+To build for production:
 
 ```
 npm run build
 ```
 
-…which uses Browserify to build a stand-alone minified version of the file.
+…which uses Webpack to build a stand-alone minified version of the file.
