@@ -11,6 +11,7 @@
     "lodash.throttle": "4.0.1"
   },
   "devDependencies": {
+    "del-cli": "0.2.0",
     "eslint": "3.7.1",
     "eslint-config-google": "0.6.0",
     "harp-minify": "0.4.0",
@@ -28,6 +29,6 @@
     "pretest": "npm run build",
     "posttest": "npm run lint",
     "test": "",
-    "build": "mkdirp build; browserify index.js -s gfBadge -o build/googlefontsbadge.js; ./node_modules/.bin/minify build/googlefontsbadge.js build/googlefontsbadge.js"
+    "build": "mkdirp dist; del ./dist/*; browserify index.js -s gfBadge -o dist/googlefontsbadge.js; ./node_modules/.bin/minify dist/googlefontsbadge.js dist/googlefontsbadge.js"
   }
 }

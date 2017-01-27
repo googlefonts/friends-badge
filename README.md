@@ -10,10 +10,10 @@ The “Made by Friends of Google Fonts” badge.
 
 ## Getting started
 
-A hosted version of this script will be available. To add it to your project, add this script tag to your project:
+A hosted version of this script is available. To add it to your project, add this script tag to your project:
 
 ```html
-<script src="../build/googlefontsbadge.js" async defer onload="gfBadge()"></script>
+<script src="https://rawgit.com/googlefonts/friends-badge/master/dist/googlefontsbadge.js" async defer onload="gfBadge()"></script>
 ```
 
 This will asynchronously load the badge and initialise it once it’s ready.
