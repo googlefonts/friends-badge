@@ -10,7 +10,7 @@
   ],
   "main": "build/googlefontsbadge.js",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash.throttle": "^4.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
