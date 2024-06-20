@@ -1,6 +1,7 @@
 # Friends of Google Fonts badge
 
-The “Made by Friends of Google Fonts” badge is intended only for placement on sites hosted on googlefonts.github.io/something
+The “Made by Friends of Google Fonts” badge is intended for placement on sites that celebrate typefaces commissioned by Google Fonts.
+Typically these are published as a sub-page of [fonts.withgoogle.com](https://fonts.withgogole.com) or [googlefonts.github.io](https://googlefonts.github.io), but may also be sites hosted on Github Pages with a custom domain name, or in rare cases a site with a custom host and domain name. 
 
 The badge was designed by Yuin Chien (@yuinchien) and developed by Kenneth Ormandy (@kennethormandy)
 
